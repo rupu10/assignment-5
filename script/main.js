@@ -43,6 +43,10 @@ document.getElementById("card-1-btn").addEventListener("click", function(event){
     div.innerText = `you have completed the ${heading} task at ${time()}`;
     container.appendChild(div);
 
+    if(decrement === 0){
+        alert("you have completed all task")
+    }
+
 })
 
 
@@ -69,6 +73,10 @@ document.getElementById("card-2-btn").addEventListener("click", function(event){
     div.classList.add("history-div");
     div.innerText = `you have completed the ${heading} task ${time()}`;
     container.appendChild(div);
+
+    if(decrement === 0){
+        alert("you have completed all task")
+    }
 
 })
 
@@ -97,6 +105,10 @@ document.getElementById("card-3-btn").addEventListener("click", function(event){
     div.innerText = `you have completed the ${heading} task ${time()}`;
     container.appendChild(div);
 
+    if(decrement === 0){
+        alert("you have completed all task")
+    }
+
 })
 
 document.getElementById("card-4-btn").addEventListener("click", function(event){
@@ -123,6 +135,10 @@ document.getElementById("card-4-btn").addEventListener("click", function(event){
     div.classList.add("history-div");
     div.innerText = `you have completed the ${heading} task ${time()}`;
     container.appendChild(div);
+
+    if(decrement === 0){
+        alert("you have completed all task")
+    }
 
 })
 
@@ -152,6 +168,10 @@ document.getElementById("card-5-btn").addEventListener("click", function(event){
     div.innerText = `you have completed the ${heading} task ${time()}`;
     container.appendChild(div);
 
+    if(decrement === 0){
+        alert("you have completed all task")
+    }
+
 })
 
 document.getElementById("card-6-btn").addEventListener("click", function(event){
@@ -179,6 +199,10 @@ document.getElementById("card-6-btn").addEventListener("click", function(event){
     div.innerText = `you have completed the ${heading} task ${time()}`;
     container.appendChild(div);
 
+    if(decrement === 0){
+        alert("you have completed all task")
+    }
+
 })
 
 const task = document.getElementById("task").innerText;
@@ -192,6 +216,18 @@ document.getElementById("clear-btn").addEventListener("click", function (){
     document.getElementById("history-container").innerText = " ";
 })
 
+
+// random collor
+let changeBtn = document.getElementById("theme-button");
+
+changeBtn.addEventListener("click", function () {
+  document.body.style.backgroundColor = generateRandomColor();
+});
+
+function generateRandomColor() {
+  let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  return randomColor;
+}
 
 
 
