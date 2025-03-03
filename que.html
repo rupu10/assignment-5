@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .bg-white{
+            background-color: #FFFFFF;
+        }
+        .bg-secondary{
+            background-color: #F4F7FF;
+        }
+        .blue-btn{
+            background-color: #3752FD;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="bg-secondary">
+    <section class="w-11/12 mx-auto bg-[#FFFFFF] p-5 rounded-2xl mb-4">
+        <div class="flex justify-between">
+            <div class="flex justify-center items-center gap-3">
+                <img src="./assets/logo.png" alt="">
+                <p class="text-4xl">Dev<span class="font-bold">Board</span></p>
+            </div>
+            <div>
+                <button id="back-desk-btn" class="blue-btn cursor-pointer font-bold">Back to Desk</button>
+            </div>
+        </div>
+    </section>
+    <h2 class="font-bold text-center text-2xl mb-4">Blogs</h2>
+    <section class="w-11/12 mx-auto">
+        <div class="grid ">
+            <div class="mb-3 bg-white p-3">
+                <p class="font-bold mb-4">Question-1: What are the different ways to select an element in the DOM?</p>
+                <p class="border-dashed border-gray-500"></p>
+                <p>there are many ways to select an element in DOM. but the main ways are: document.getElementById(), document.getElementsByClassName(), document.getElementsByTagName(), document.querySelector() and document.querySelectorAll()</p>
+            </div>
+            <div class="mb-3 bg-white p-3">
+                <p class="font-bold mb-4">Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
+                <p class="border-dashed border-gray-500"></p>
+                <p>
+                    innerHTML: it gets or sets the HTML content inside an element, including all HTML tags. <br>
+                    innerText: it gets or sets the visible text content of an element, excluding hidden elements and respecting CSS styling. <br>
+                    textContent: it gets or sets the text content of an element, including all child nodes, regardless of visibility or CSS styling
+                </p>
+            </div>
+            <div class="mb-3 bg-white p-3">
+                <p class="font-bold mb-4">Question-3: What is event delegation in the DOM?</p>
+                <p class="border-dashed border-gray-500"></p>
+                <p>Event delegation is a technique in JavaScript where you delegate the handling of events to a parent element rather than attaching event listeners to individual child elements</p>
+            </div>
+            <div class="mb-3 bg-white p-3">
+                <p class="font-bold mb-4">Question-4: What is event bubbling in the DOM?</p>
+                <p class="border-dashed border-gray-500"></p>
+                <p>Event bubbling is a key concept in the DOM (Document Object Model) that describes how events propagate through the elements. When an event occurs on a specific element (a button click), it doesn't just trigger on that element alone. Instead, the event "bubbles up" through its ancestor elements in the DOM tree, triggering any event listeners attached to those ancestors.?</p>
+            </div>
+            <div class="mb-3 bg-white p-3">
+                <p class="font-bold mb-4">Question-5: How do you create, add, and remove elements using JavaScript?</p>
+                <p class="border-dashed border-gray-500"></p>
+                <p>I will create an element with document.createElement() add with appendChild() and remove with removeChild().</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script/que.js"></script>
+</body>
+</html>

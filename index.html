@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .bg-white{
+            background-color: #FFFFFF;
+        }
+        .bg-secondary{
+            background-color: #F4F7FF;
+        }
+        .blue-btn{
+            background-color: #3752FD;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .history-div{
+            background-color: #F4F7FF;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            padding: 8px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="bg-[#F4F7FF] py-6">
+    <!-- nav section -->
+    <section class="w-11/12 mx-auto bg-[#FFFFFF] p-5 rounded-2xl">
+        <div class="flex justify-between">
+            <div class="flex justify-center items-center gap-3">
+                <img src="./assets/logo.png" alt="">
+                <p class="text-4xl">Dev<span class="font-bold">Board</span></p>
+            </div>
+            <div class="flex justify-center items-center gap-11">
+                <div class="flex justify-center items-center gap-1.5 bg-[#F4F7FF] rounded-3xl p-4">
+                    <img src="./assets/checkbox.png" alt="">
+                    <p class="font-bold text-3xl" id="rupu">23</p>
+                </div>
+                <div class="bg-[#F4F7FF] flex justify-center items-center p-3 rounded-full cursor-pointer" id="theme-button">
+                    <img src="./assets/theme-btn.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- main section -->
+
+    <section class="w-11/12 mx-auto mt-6">
+        <div class="grid grid-cols-4 gap-x-6">
+            <!-- task section -->
+            <div class="col-span-3 bg-[#FFFFFF] p-6 rounded-2xl">
+                <!-- upper section -->
+                <div class="mb-14">
+                    <div class="flex gap-x-6 justify-between">
+                        <div class="flex bg-[#F4F7FF] p-8 rounded-2xl">
+                            <div class="flex justify-center items-center gap-x-5">
+                                <div class="bg-[#FFFFFF] p-4 rounded-full">
+                                    <img src="./assets/checkbox.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="text-lg">Task Assigned</p>
+                                    <p class="font-bold text-3xl" id="task">06</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div id="discover-content" class=" bg-linear-to-r from-[#3752FD] to-[#6C7FFA] py-6 pl-11 pr-64 flex justify-between items-center rounded-2xl flex-1 cursor-pointer">
+                            <div>
+                                <img src="./assets/board.png" alt="">
+                            </div>
+                            <p class="text-white text-2xl">Discover Something <br> New Today!</p>
+                        </div>
+                        <div class="bg-[#F4F7FF] flex justify-center items-center py-8 px-6 rounded-2xl gap-x-4">
+                            <div class="bg-[#FFFFFF] p-4 rounded-full">
+                                <img src="./assets/calender.png" alt="">
+                            </div>
+                            <!-- <p class="text-2xl">Wed <br> <span class="font-bold">Jul 28 2025 </span></p> -->
+                            <div class="font-semibold" id="dayDateDisplay"></div>
+                        </div>
+                    </div>
+                    <!-- <p class="border-dashed w-full"></p> -->
+                </div>
+                <!-- down section -->
+                <div class="grid grid-rows-2 grid-cols-3 gap-9">
+                    <!-- card 1-->
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl grid gap-y-4">
+                        <p class="bg-white w-fit rounded-lg py-2 px-4">ShopEase</p>
+                        <h3 class="font-bold text-2xl cards-heading" id="card-1-heading">Fix Mobile Button Issue </h3>
+                        <div class="bg-white p-4 rounded-lg">
+                            <p>Debug using Chrome DevTools, <br> check for overlapping</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-semibold">21 March 2025</p>
+                            </div>
+                            <div>
+                                <button class="blue-btn card-btn" id="card-1-btn">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 2-->
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl grid gap-y-4">
+                        <p class="bg-white w-fit rounded-lg py-2 px-4">CloudSync</p>
+                        <h3 class="font-bold text-2xl" id="card-2-heading">Add Dark Mode</h3>
+                        <div class="bg-white p-4 rounded-lg">
+                            <p>Store the user's preference in <br> localStorage, update CSS</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-semibold">21 March 2025</p>
+                            </div>
+                            <div>
+                                <button class="blue-btn" id="card-2-btn">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 3-->
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl grid gap-y-4">
+                        <p class="bg-white w-fit rounded-lg py-2 px-4">SwiftPay</p>
+                        <h3 class="font-bold text-2xl" id="card-3-heading">Optimize  Home page</h3>
+                        <div class="bg-white p-4 rounded-lg">
+                            <p>Debug using Chrome DevTools, <br> check for overlapping</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-semibold">21 March 2025</p>
+                            </div>
+                            <div>
+                                <button class="blue-btn" id="card-3-btn">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 4-->
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl grid gap-y-4">
+                        <p class="bg-white w-fit rounded-lg py-2 px-4">Meta</p>
+                        <h3 class="font-bold text-2xl" id="card-4-heading">Add new emoji 🤲</h3>
+                        <div class="bg-white p-4 rounded-lg">
+                            <p>Debug using Chrome DevTools, <br> check for overlapping</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-semibold">21 March 2025</p>
+                            </div>
+                            <div>
+                                <button class="blue-btn" id="card-4-btn">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 5-->
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl grid gap-y-4">
+                        <p class="bg-white w-fit rounded-lg py-2 px-4">Google LLC</p>
+                        <h3 class="font-bold text-2xl" id="card-5-heading">Integrate OpenAI API </h3>
+                        <div class="bg-white p-4 rounded-lg">
+                            <p>Debug using Chrome DevTools, <br> check for overlapping</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-semibold">21 March 2025</p>
+                            </div>
+                            <div>
+                                <button class="blue-btn" id="card-5-btn">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 6-->
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl grid gap-y-4">
+                        <p class="bg-white w-fit rounded-lg py-2 px-4">Glassdoar</p>
+                        <h3 class="font-bold text-2xl" id="card-6-heading">Improve Job searching </h3>
+                        <div class="bg-white p-4 rounded-lg">
+                            <p>Debug using Chrome DevTools, <br> check for overlapping</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-semibold">21 March 2025</p>
+                            </div>
+                            <div>
+                                <button class="blue-btn" id="card-6-btn">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- history section -->
+            <div class="bg-[#FFFFFF] p-6 rounded-2xl">
+                <div class="flex justify-center items-center gap-x-4 mb-4">
+                    <div>
+                        <img src="./assets/activity.png" alt="">
+                    </div>
+                    <h3 class="font-medium text-xl">Activity Log</h3>
+                </div>
+                <div class="flex justify-center items-center">
+                    <button class="blue-btn" id="clear-btn">Clear History</button>
+                </div>
+                <div id="history-container">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script/main.js"></script>
+    <script src="./script/discover-new.js"></script>
+    <script src="./script/utilities.js"></script>
+</body>
+</html>
