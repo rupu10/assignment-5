@@ -217,7 +217,6 @@ document.getElementById("clear-btn").addEventListener("click", function (){
 })
 
 
-// random collor
 let changeBtn = document.getElementById("theme-button");
 
 changeBtn.addEventListener("click", function () {
@@ -228,6 +227,10 @@ function generateRandomColor() {
   let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
   return randomColor;
 }
+
+
+
+
 
 
 
